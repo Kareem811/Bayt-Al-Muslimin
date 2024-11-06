@@ -1,0 +1,154 @@
+.container {
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+  padding: 30px 0;
+}
+.container h1 {
+  font-size: 40px;
+  color: #a07d4d;
+  font-weight: 900;
+  position: relative;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+/* .container .content {
+  width: 90%;
+  min-height: 30vh;
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+} */
+.container .content {
+  width: 90%;
+  min-height: 30vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.container .content a {
+  padding: 14px;
+  color: #2b2b2b;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
+}
+.container .content a:hover {
+  background-color: #a07d4d;
+  color: #fff;
+}
+.container .ayahs {
+  width: 90%;
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.container .ayahs span {
+  font-size: 35px;
+  line-height: 90px;
+}
+@media screen and (max-width: 920px) {
+  .container .content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 650px) {
+  .container .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  .container .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.container .ayahs .ayah {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.5s;
+}
+.container .ayahs .ayah .ayahNumber {
+  width: 40px;
+  height: 40px;
+  background-image: url(../../Assets/Images/Mustaf/ayanumbers1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  justify-self: center;
+}
+.container .ayahs .ayah .ayahNumber span {
+  font-size: 18px;
+}
+.container .ayahs .ayah:hover {
+  box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.2);
+}
+/* ------------------- */
+.tafserContainer {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 100px;
+  left: 0;
+}
+.tafserContainer .content {
+  width: calc(100% - 100px);
+  padding: 50px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 60px;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.tafserContainer .content svg {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+.tafserContainer .content p 
+{
+  background-color: #a07d4d52;
+  padding: 10px;
+  font-size: 20px;
+}
+.tafserContainer .content span 
+{
+  color: #4b4b4b;
+  font-size: 18px;
+}

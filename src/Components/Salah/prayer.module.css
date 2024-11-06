@@ -1,0 +1,73 @@
+.container {
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 100px;
+}
+.container h1 {
+  font-size: 70px;
+  color: #a07d4d;
+  font-weight: 900;
+  position: relative;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.container h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #a07d4d;
+}
+/* .container .content {
+  width: 90%;
+  min-height: 30vh;
+  background-color: gold;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 15px;
+  column-gap: 20px;
+  padding: 20px 0;
+}
+.container .content .salah {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.2);
+} */
+.container .content {
+  width: 90%;
+  min-height: 30vh;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+.container .content .salah {
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+}
+/* .container .content .salah img {
+  width: 700px;
+  height: 450px;
+  object-fit: contain;
+} */
+.container .content .salah h2 
+{
+  font-size: 120px;
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+  font-weight: 900;
+}
