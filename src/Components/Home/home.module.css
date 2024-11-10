@@ -27,7 +27,6 @@
 .container .content {
   width: 90%;
   min-height: 30vh;
-  /* background-color: red; */
   display: flex;
   gap: 30px;
   justify-content: space-evenly;

@@ -1,31 +1,30 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Navbar from "../../Layouts/Navbar/Navbar";
 import mushafStyles from "./mushaf.module.css";
 import AyahTafseer from "./AyahTafseer";
 import changeNumbersToArabic from "../Functions/ChangeNumbers";
+import Loading from "../Loading/Loading";
+import SwrNames from "../../Utilities/SwrNames";
 const SingleSurah = () => {
   const { surahId } = useParams();
   const [surah, setSurah] = useState([]);
-  // const [arabicNumbers] = useState(["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"]);
   const [tafser, setTafser] = useState(false);
   const [aya, setAyah] = useState({});
-  // const changeNumbersToArabic = (num) => {
-  //   return num
-  //     .toString()
-  //     .split("")
-  //     .map((n) => arabicNumbers[parseInt(n, 10)])
-  //     .join("");
-  // };
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios
       .get(`https://quranenc.com/api/v1/translation/sura/arabic_moyassar/${surahId}`)
       .then((res) => {
-        // console.log(res.data.result);
         setSurah(res.data.result);
+        setLoading(false);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
+    document.title = `سورة ${SwrNames[surahId - 1]}`;
   }, [surahId]);
   const getTafser = (x) => {
     setAyah(x);
@@ -34,23 +33,33 @@ const SingleSurah = () => {
   const closeTafser = () => {
     setTafser(false);
   };
+
   return (
     <>
       <Navbar />
-      <section className={mushafStyles.container}>
-        {tafser && <AyahTafseer data={aya} close={closeTafser} />}
-        <h1>{surah.name}</h1>
-        <div className={mushafStyles.ayahs}>
-          {surah.map((el, idx) => (
-            <div onClick={() => getTafser(el)} key={idx} className={mushafStyles.ayah}>
-              <span>{el.arabic_text}</span>
-              <div className={mushafStyles.ayahNumber}>
-                <span>{changeNumbersToArabic(el.aya)}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      {loading ? (
+        <Loading />
+      ) : (
+        <section className={mushafStyles.container}>
+          {tafser && <AyahTafseer data={aya} close={closeTafser} />}
+          <div className={mushafStyles.intro}>
+            <h1>سورة {SwrNames[surahId - 1]} </h1>
+            {surah[0].arabic_text !== "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ" && <span className={mushafStyles.start}>بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ</span>}
+          </div>
+          <div className={mushafStyles.ayahs}>
+            <>
+              {surah.map((el, idx) => (
+                <div onClick={() => getTafser(el)} key={idx} className={mushafStyles.ayah}>
+                  <span>{el.arabic_text}</span>
+                  <div className={mushafStyles.ayahNumber}>
+                    <span>{changeNumbersToArabic(el.aya)}</span>
+                  </div>
+                </div>
+              ))}
+            </>
+          </div>
+        </section>
+      )}
     </>
   );
 };

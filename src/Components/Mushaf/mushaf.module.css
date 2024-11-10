@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 40px;
   flex-direction: column;
   padding: 30px 0;
 }
@@ -15,6 +15,22 @@
   font-weight: 900;
   position: relative;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.container .intro {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.container .intro h1 {
+  font-size: 75px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.container .start {
+  font-size: 35px;
+  font-weight: 900;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 /* .container .content {
   width: 90%;
@@ -61,7 +77,7 @@
   gap: 5px;
 }
 .container .ayahs span {
-  font-size: 35px;
+  font-size: 26px;
   line-height: 90px;
 }
 @media screen and (max-width: 920px) {
@@ -103,6 +119,9 @@
   /* background-color: red; */
   justify-self: center;
 }
+.container .content .number {
+  font-size: 14px;
+}
 .container .ayahs .ayah .ayahNumber span {
   font-size: 18px;
 }
@@ -141,14 +160,12 @@
   left: 5px;
   cursor: pointer;
 }
-.tafserContainer .content p 
-{
+.tafserContainer .content p {
   background-color: #a07d4d52;
   padding: 10px;
   font-size: 20px;
 }
-.tafserContainer .content span 
-{
+.tafserContainer .content span {
   color: #4b4b4b;
   font-size: 18px;
 }
