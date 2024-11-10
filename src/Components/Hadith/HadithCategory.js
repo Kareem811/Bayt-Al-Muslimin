@@ -29,7 +29,7 @@ const HadithCategory = () => {
         ) : (
           <>
             <h1>{window.sessionStorage.getItem("name") !== null && `أحاديث ${JSON.parse(window.sessionStorage.getItem("name"))}`}</h1>
-            <div className={hadithStyles.content}>
+            <div className={hadithStyles.hadiths}>
               {items.map((el, idx) => (
                 <div key={idx} className={hadithStyles.hadith}>
                   {el.arab}

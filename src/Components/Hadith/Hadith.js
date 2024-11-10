@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import hadithStyles from "../Home/home.module.css";
+import hadithStyles from "./hadith.module.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 const Hadith = () => {
@@ -44,7 +44,7 @@ const Hadith = () => {
   return (
     <section className={hadithStyles.container}>
       <h1>الأحاديــــث</h1>
-      <div style={{ gridTemplateColumns: "repeat(3 , 1fr)" }} className={hadithStyles.content}>
+      <div className={hadithStyles.content}>
         {category.map((el, idx) => (
           <Link onClick={() => window.sessionStorage.setItem("name", JSON.stringify(el.name))} key={idx} to={`${el.slug}`} className={hadithStyles.card}>
             {el.name}
