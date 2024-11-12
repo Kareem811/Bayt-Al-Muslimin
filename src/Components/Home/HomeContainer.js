@@ -4,7 +4,7 @@ import HomeCards from "./HomeCards";
 import { IoBook, IoPeopleSharp, IoTimeSharp } from "react-icons/io5";
 import { MdSpeakerNotes } from "react-icons/md";
 const HomeContainer = () => {
-  const [contents, setContents] = useState([
+  const [contents] = useState([
     {
       cname: `المصحف`,
       cicon: <IoBook />,
@@ -28,7 +28,7 @@ const HomeContainer = () => {
   ]);
 
   return (
-    <div className={homeContainerStyles.container}>
+    <div style={{margin: '50px 0'}} className={homeContainerStyles.container}>
       <h1>الصفحه الرئيسية</h1>
 
       <div className={homeContainerStyles.content}>

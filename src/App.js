@@ -3,7 +3,7 @@ import HomeComponent from "./Routes/HomeComponent";
 import { Routes, Route } from "react-router-dom";
 import MushafComponent from "./Routes/MushafComponent";
 import SingleSurah from "./Components/Mushaf/SingleSurah";
-import PrayerTimes from "./Components/Salah/PrayerTimes";
+import PrayerTimes from "./Components/Prayer/PrayerTimes.js";
 import QuraaComponent from "./Routes/QuraaComponent";
 import HadithComponent from "./Routes/HadithComponent";
 import SingleQare from "./Components/Quraa/SingleQare";

@@ -35,7 +35,7 @@
   column-gap: 20px;
   padding: 20px 0;
 }
-.container .content .salah {
+.container .content .prayer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,30 +44,36 @@
   padding: 20px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.2);
 } */
-.container .content {
+.container .prayers {
   width: 90%;
   min-height: 30vh;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 10px;
 }
-.container .content .salah {
+.container .prayers .prayer {
   width: 100%;
   height: 100%;
-  /* background-color: red; */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 20px;
   align-items: center;
-  overflow: hidden;
+  font-size: 30px;
 }
-/* .container .content .salah img {
+.container .prayers .prayer h3 {
+  text-shadow: 0 1px 2px #00000097;
+}
+.container .prayers .prayer .time {
+  color: #3b3b3b;
+  text-shadow: none;
+}
+/* .container .content .prayer img {
   width: 700px;
   height: 450px;
   object-fit: contain;
 } */
-.container .content .salah h2 
-{
+.container .content .prayer h2 {
   font-size: 120px;
-  text-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
   font-weight: 900;
 }

@@ -6,6 +6,7 @@ import quraaStyles from "./quraa.module.css";
 import { IoMdArrowDropleftCircle } from "react-icons/io";
 import changeNumbersToArabic from "../Functions/ChangeNumbers";
 import Loading from "../Loading/Loading";
+import Footer from "../../Layouts/Footer/Footer";
 
 const SingleQare = () => {
   const [reciter, setReciter] = useState([]);
@@ -79,6 +80,7 @@ const SingleQare = () => {
           </>
         )}
       </section>
+      <Footer/>
     </>
   );
 };

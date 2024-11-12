@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Navbar from "../Layouts/Navbar/Navbar";
 import Mushaf from "../Components/Mushaf/Mushaf";
+import Footer from "../Layouts/Footer/Footer";
 
 const MushafComponent = () => {
   useEffect(() => {
@@ -10,6 +11,7 @@ const MushafComponent = () => {
     <>
       <Navbar />
       <Mushaf />
+      <Footer/>
     </>
   );
 };

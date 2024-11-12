@@ -1,0 +1,87 @@
+.backgroundSection {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.backgroundSection img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.backgroundSection .backgroundData {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top left, rgba(0, 0, 0, 0.753), #a07d4d70);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding: 0 100px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.backgroundSection .backgroundData .content {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 50px;
+}
+.backgroundSection .backgroundData .content h2 {
+  font-size: 100px;
+  color: #fff;
+  font-weight: 900;
+  opacity: 1;
+  animation: title 1s linear;
+  text-shadow: 3px 3px 4px #ffffffb0;
+}
+@keyframes title {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.backgroundSection .backgroundData .content a {
+  background-color: gold;
+  color: #fff;
+  background-color: #a07d4d;
+  padding: 7px 45px;
+  border-radius: 4px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.1);
+  font-size: 22px;
+  transition: 0.5s;
+  animation: link 0.25s linear;
+}
+
+.backgroundSection .backgroundData .content a:hover {
+  background-color: #a07d4dd7;
+}
+@keyframes link {
+  from {
+    transform: translateY(-120%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 625px) {
+  .backgroundSection .backgroundData {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .backgroundSection .backgroundData .content {
+    gap: 50px;
+  }
+  .backgroundSection .backgroundData .content h2 {
+    font-size: 50px;
+  }
+}

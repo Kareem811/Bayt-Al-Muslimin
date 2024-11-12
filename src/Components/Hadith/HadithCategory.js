@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import hadithStyles from "./hadith.module.css";
 import Loading from "../Loading/Loading";
+import Footer from "../../Layouts/Footer/Footer";
 const HadithCategory = () => {
   const { category } = useParams();
   const [items, setItems] = useState([]);
@@ -39,6 +40,7 @@ const HadithCategory = () => {
           </>
         )}
       </section>
+      <Footer/>
     </>
   );
 };

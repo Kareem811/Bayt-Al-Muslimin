@@ -24,14 +24,21 @@ const Navbar = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      window.scrollY >= 603 ? setScroll(true) : setScroll(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const changeMenu = () => {
     setBigMenu(!bigMenu);
     setClose(!close);
   };
   const { surahId } = useParams();
   return (
-    <header>
+    <header className={window.location.pathname === "/" || window.location.pathname === "/home" ? (scroll ? "" : "headerScroll") : undefined}>
       <nav>
         <span>بيت المسلمين</span>
         <ul className={bigMenu ? "bigMenu" : undefined} style={menuSize ? { display: "none" } : { display: "flex" }}>

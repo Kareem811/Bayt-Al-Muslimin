@@ -1,0 +1,33 @@
+.container {
+  width: 90%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .content {
+  width: calc(100% - 100px);
+  padding: 10px 50px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.container h1 {
+  padding: 10px;
+  font-size: 30px;
+}
+.container .content span {
+  color: #4b4b4b;
+  font-size: 22px;
+}
+.container .content h3 {
+  align-self: flex-end;
+}

@@ -7,6 +7,7 @@ import AyahTafseer from "./AyahTafseer";
 import changeNumbersToArabic from "../Functions/ChangeNumbers";
 import Loading from "../Loading/Loading";
 import SwrNames from "../../Utilities/SwrNames";
+import Footer from "../../Layouts/Footer/Footer";
 const SingleSurah = () => {
   const { surahId } = useParams();
   const [surah, setSurah] = useState([]);
@@ -60,6 +61,7 @@ const SingleSurah = () => {
           </div>
         </section>
       )}
+      {loading ? undefined : <Footer />}
     </>
   );
 };
