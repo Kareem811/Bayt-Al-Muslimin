@@ -1,6 +1,6 @@
 import React from "react";
 import backgroundStyles from "./background.module.css";
-import bg from "../../../Assets/Images/Prayers/Dohr.jpg";
+import bg from "../../../Assets/Images/Prayers/Dohr.webp";
 import { Link } from "react-router-dom";
 const Background = () => {
   return (
